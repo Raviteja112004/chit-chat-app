@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react";
+import AuthImagePattern from "../components/AuthImagePattern";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
@@ -100,36 +101,10 @@ function LoginPage() {
         </div>
       </div>
       {/* right side */}
-      <div className="relative h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 overflow-hidden">
-        <nav className="absolute top-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center">
-              <MessageSquare className="w-5 h-5 text-primary" />
-            </div>
-            <h1 className="text-lg font-bold">Chit-Chat</h1>
-          </div>
-          <div className="flex items-center gap-4">
-            <a href="/" className="hover:underline">
-              Home
-            </a>
-            <a href="/about" className="hover:underline">
-              About
-            </a>
-            <a href="/contact" className="hover:underline">
-              Contact
-            </a>
-          </div>
-        </nav>
-        <div className="absolute top-0 left-0 w-64 h-64 bg-indigo-200 rounded-full animate-pulse opacity-50"></div>
-        <div className="absolute top-1/3 left-1/3 w-48 h-48 bg-purple-200 rounded-full animate-spin opacity-75"></div>
-        <div className="absolute bottom-0 right-0 w-72 h-72 bg-pink-200 rounded-full animate-bounce opacity-40"></div>
-        <div className="relative z-10 flex justify-center items-center h-full text-white">
-          <h1 className="text-5xl font-bold text-center flex">
-            Welcome to Chit-Chat!{" "}
-            <MessageSquare className="opacity-60 size-10" />
-          </h1>
-        </div>
-      </div>
+      <AuthImagePattern
+        title={"Welcome back!"}
+        subtitle={"Sign in to continue your conversations and catch up with your messages."}
+      />
     </div>
   );
 }

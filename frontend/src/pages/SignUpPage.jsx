@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuthStore } from "../store/useAuthStore";
+import AuthImagePattern from "../components/AuthImagePattern";
 import toast from "react-hot-toast";
 import {
   MessageSquare,
@@ -150,20 +151,10 @@ function SignUpPage() {
         </div>
       </div>
       {/* right side */}
-      <div>
-      <div class="relative h-screen bg-gradient-to-r from-blue-500 to-purple-500 overflow-hidden">
-        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-200 rounded-full animate-ping opacity-50"></div>
-        <div class="absolute top-1/4 left-1/4 w-48 h-48 bg-purple-200 rounded-full animate-bounce opacity-75"></div>
-        <div class="absolute bottom-0 right-0 w-72 h-72 bg-green-200 rounded-full animate-pulse opacity-40"></div>
-
-        <div class="relative z-10 flex justify-center items-center h-full text-white">
-          <h1 class="text-5xl font-bold text-center flex">
-            Welcome to Chit-Chat!{" "}
-            <MessageSquare className="opacity-60 size-10" />
-          </h1>
-        </div>
-      </div>
-      </div>
+      <AuthImagePattern
+        title="Join our community"
+        subtitle="Connect with friends, share moments, and stay in touch with your loved ones."
+      />
     </div>
   );
 }
